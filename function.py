@@ -3,3 +3,6 @@ def f(x):
 
 def df(x):
     return -4*x**3 + 30*x + 12
+
+def d2f(x):
+    return -12*x**2 + 30
