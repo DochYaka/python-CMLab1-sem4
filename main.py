@@ -11,9 +11,9 @@ def main():
 
     print()
 
-    for a, b in intervals:
-        newtonMethod.newton_method(a, b)
-        print()
+    # for a, b in intervals:
+    #     newtonMethod.newton_method(a, b)
+    #     print()
 
     print("=" * 40)
     print("=" * 40)
@@ -21,8 +21,7 @@ def main():
     print()
 
     for a, b in intervals:
-        simpleIterationMethod.simple_iteration_method(a, b, x0=a)
-        simpleIterationMethod.simple_iteration_method(a, b, x0=b)
+        simpleIterationMethod.simple_iteration_method(a, b)
 
 
 if __name__ == "__main__":
