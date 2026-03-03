@@ -37,20 +37,18 @@ def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=100, x0=None)
 
     phi, lam, q = _build_phi(a, b)
 
-    print("Метод простых итераций")
+    print(f"Интервал [{a}, {b}]")
     print(f"lambda = {lam:.10g}")
 
     print("Эквивалентная форма уравнения:")
     print(f"x = x + ({lam:.10g}) * f(x)")
 
     print(f"q = {q:.6g}")
-    print(f"Интервал [{a}, {b}]")
-    print(f"Старт x0 = {x0:.10f}")
+
+    print(f"Начальное приближение x0 = {x0:.10f}")
     print("=" * 40)
 
     x = x0
-    print(f"Итерация {0:3d}: x = {x:.10f}")
-
     for i in range(1, max_iter + 1):
         x_next = phi(x)
 
@@ -76,8 +74,6 @@ def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=100, x0=None)
         if x_ok and f_ok:
             print("=" * 40)
             print(f"Корень: x ≈ {x_next:.10f}")
-            print(f"f(x) = {function.f(x_next):.10e}")
-            print()
             return x_next
 
         x = x_next

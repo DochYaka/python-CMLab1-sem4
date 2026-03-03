@@ -11,21 +11,24 @@ def main():
 
     print()
 
+    print("Метод Ньютона\n")
     for a, b in intervals:
         newtonMethod.newton_method(a, b)
         print()
 
-    print("=" * 40)
-    print("=" * 40)
-    print("=" * 40)
     print()
 
+    print("Метод простых итераций\n")
     for a, b in intervals:
-        simpleIterationMethod.simple_iteration_method(a, b, x0=a)
-        simpleIterationMethod.simple_iteration_method(a, b, x0=b)
+        simpleIterationMethod.simple_iteration_method(a, b)
+        print()
 
+    print()
+
+    print("Метод секущих\n") 
     for a, b in intervals:
         secantMethod.secant_method(a, b)
+        print()
 
 if __name__ == "__main__":
     main()
