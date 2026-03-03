@@ -15,11 +15,11 @@ def secant_method(x0, x1, eps=1e-4, max_iter=100):
         
         x2 = x1 - f_x1 * (x1 - x0) / (f_x1 - f_x0)
         
-        print(f"Итерация {i+1}: x = {x2}")
+        print(f"Итерация {i+1}: x = {x2:.6f}")
         
         if abs(x2 - x1) < eps:
             print("=" * 40)
-            print("Корень найден:", x2)
+            print(f"Корень найден: x ≈ {x2:.6f}")
             return x2
         
         x0, x1 = x1, x2
