@@ -49,7 +49,7 @@ def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=100, x0=None)
     print("=" * 40)
 
     x = x0
-    print(f"итерация {0:3d}: x = {x:.10f}")
+    print(f"Итерация {0:3d}: x = {x:.10f}")
 
     for i in range(1, max_iter + 1):
         x_next = phi(x)
@@ -59,7 +59,7 @@ def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=100, x0=None)
             print()
             return None
 
-        print(f"итерация {i:3d}: x = {x_next:.10f}")
+        print(f"Итерация {i:3d}: x = {x_next:.10f}")
 
         diff = abs(x_next - x)
 
