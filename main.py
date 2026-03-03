@@ -12,7 +12,6 @@ def main():
     for a, b in intervals:
         newtonMethod.newton_method(a, b)
 
-    # Простые итерации (два старта: левый и правый конец)
     for a, b in intervals:
         simpleIterationMethod.simple_iteration_method(a, b, x0=a)
         simpleIterationMethod.simple_iteration_method(a, b, x0=b)

@@ -17,6 +17,7 @@ def _build_phi(a, b, n=4000):
     safety = 1.0
     while True:
         lam = lam0 / safety
+        
         q = np.max(np.abs(1 + lam * df_vals))
         if q < 1:
             break
@@ -30,16 +31,20 @@ def _build_phi(a, b, n=4000):
     return phi, lam, q
 
 
-def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=5000, x0=None):
+def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=100, x0=None):
     if x0 is None:
         x0 = (a + b) / 2
 
     phi, lam, q = _build_phi(a, b)
 
     print("Метод простых итераций")
-    print(f"Интервал [{a}, {b}]")
-    print(f"lambda = {lam:.12g}")
+    print(f"lambda = {lam:.10g}")
+
+    print("Эквивалентная форма уравнения:")
+    print(f"x = x + ({lam:.10g}) * f(x)")
+
     print(f"q = {q:.6g}")
+    print(f"Интервал [{a}, {b}]")
     print(f"Старт x0 = {x0:.10f}")
     print("=" * 40)
 
@@ -76,7 +81,7 @@ def simple_iteration_method(a, b, eps_x=1e-4, eps_f=1e-3, max_iter=5000, x0=None
             return x_next
 
         x = x_next
-
+    
     print("Не сошлось за max_iter")
     print()
     return None

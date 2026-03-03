@@ -4,6 +4,7 @@ def newton_method(a, b, eps=1e-4, max_iter=100):
     x = (a + b) / 2
 
     print("Метод Ньютона")
+    print(f"Интервал: [{a}, {b}]")
     print(f"Начальное приближение x0 = {x:.6f}")
     print("=" * 40)
 
