@@ -3,7 +3,7 @@ import simpleIterationMethod
 import secantMethod
 import graphCreate
 
-graphCreate.Graph()
+# graphCreate.Graph()
 
 newtonMethod.newton_method(-4, -3)
 newtonMethod.newton_method(-2, -1)
