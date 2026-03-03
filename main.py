@@ -24,6 +24,8 @@ def main():
         simpleIterationMethod.simple_iteration_method(a, b, x0=a)
         simpleIterationMethod.simple_iteration_method(a, b, x0=b)
 
+    for a, b in intervals:
+        secantMethod.secant_method(a, b)
 
 if __name__ == "__main__":
     main()
